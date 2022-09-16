@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+<body>
+
+</body>
+</html>
+<script type="text/javascript">
+  function setup() {
+    var lis = document.querySelectorAll('ul li');
+    for (var i = 0; i < lis.length; i++) {
+      console.log(lis[i])
+      lis[i].addEventListener('click', function(e) {
+        // Write your code here
+         document.getElementsByTagName("ul").append('<p>Bla bla bla');
+      });
+    }
+  }
+
+ function test(){
+  document.body.innerHTML = `
+    <ul>
+      <li>A</li>
+      <li>B</li>
+      <li>C</li>
+    </ul>`;
+ }
+// Example case. 
+document.body.innerHTML = `
+<ul>
+  <li>A</li>
+  <li>B</li>
+  <li>C</li>
+</ul>`;
+
+setup();
+
+document.getElementsByTagName("li")[2].click();
+console.log(document.body.innerHTML);
+</script>
